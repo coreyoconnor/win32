@@ -23,13 +23,13 @@ module System.Win32.Types
 import Control.Exception (throwIO)
 import Data.Bits (shiftL, shiftR, (.|.), (.&.))
 import Data.Char (isSpace)
-import Data.Int (Int32, Int64)
+import Data.Int (Int16, Int32, Int64)
 import Data.Maybe (fromMaybe)
 import Data.Word (Word8, Word16, Word32, Word64)
 import Foreign.C.Error (getErrno, errnoToIOError)
 import Foreign.C.String (newCWString, withCWStringLen)
 import Foreign.C.String (peekCWString, peekCWStringLen, withCWString)
-import Foreign.C.Types (CChar, CUChar, CWchar)
+import Foreign.C.Types (CChar, CShort, CUChar, CUShort, CWchar)
 import Foreign.ForeignPtr (ForeignPtr, newForeignPtr, newForeignPtr_)
 import Foreign.Ptr (FunPtr, Ptr, nullPtr)
 import Numeric (showHex)
@@ -62,7 +62,8 @@ finiteBitSize = bitSize
 type BOOL          = Bool
 type BYTE          = Word8
 type UCHAR         = CUChar
-type USHORT        = Word16
+type USHORT        = CUShort
+type SHORT         = CShort
 type UINT          = Word32
 type INT           = Int32
 type WORD          = Word16

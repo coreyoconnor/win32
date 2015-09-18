@@ -1,5 +1,5 @@
 name:		Win32
-version:	2.3.1.0
+version:	2.3.2.0
 license:	BSD3
 license-file:	LICENSE
 author:		Alastair Reid
@@ -75,6 +75,7 @@ Library
         cbits/dumpBMP.c
         cbits/ellipse.c
         cbits/errors.c
+        cbits/ConsoleStubs.c
 
 source-repository head
     type:     git
